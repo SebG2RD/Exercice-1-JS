@@ -27,7 +27,9 @@ const questions = [
 // Création d'une fonction quizz qui va afficher les questions et les réponses possibles
 const quizz = () => {
   alert(`Bienvenue sur ce quizz !`); // Message de bienvenue
-  alert(`Vous allez répondre à ${questions.length} questions, bonne chance !`); // Indique le nombre de questions
+  alert(
+    `Vous allez répondre \n à ${questions.length} questions,  \n bonne chance !`
+  ); // Indique le nombre de questions
   let bonnesReponses = 0; // Compteur pour les bonnes réponses
 
   // Boucle à travers chaque question
@@ -46,7 +48,6 @@ const quizz = () => {
           reponsesMelangees[0]
         }\n2: ${reponsesMelangees[1]}\n3: ${reponsesMelangees[2]}`
       ); // Demande à l'utilisateur de choisir une réponse
-
       // Vérification si l'utilisateur a cliqué sur "Annuler"
       if (reponseUtilisateur === null) {
         alert("Quizz annulé."); // Message d'annulation
@@ -78,5 +79,4 @@ const quizz = () => {
     );
   }
 }; // Ajout de la parenthèse fermante manquante pour la fonction quizz
-
 quizz();
